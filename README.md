@@ -1,18 +1,15 @@
-Task list Day 1:
-- [] Demonstrate the the ability to use create-react-app to boilerplate a react application
-- [] Describe and be able to use PropTypes to 'type check' specific data being passed down to a child component
-- [] Demonstrate the ability to use defaultProps in a React component.
-Task list Day 2:
-- [] implement Search Bar
-- [] implement Post Container
-- [] implement Comment Section
-Task list Day 3:
-Task list Day 4:
-- []
-- []
-
-
-
+Main Task list Day 1: MVP
+- [ ] Demonstrate the the ability to use create-react-app to boilerplate a react application
+- [ ] Describe and be able to use PropTypes to 'type check' specific data being passed down to a child component
+- [ ] Demonstrate the ability to use defaultProps in a React component.
+Steps to MVP
+- [ ] import the dummy data from the `dummy-data.js` file with `import dummyData from './dummy-data';`
+- [ ] iterate over dummy data, passing each individual object as a prop to an instance of `PostContainer`
+- [ ] Create a `components` directory inside the `src` directory
+- [ ] Create sub-directory inside Components called `SearchBar`, another one called `PostContainer`, and lastly one called
+- [ ] Create sub-directory inside Components called `PostContainer`
+- [ ] Create sub-directory inside Components called `CommentSection`
+- [ ] `PostContainer` component will then pass the array of comments on each post object as a prop to an instance of the `CommentSection` component.
 
 # React-Insta-Clone
 
