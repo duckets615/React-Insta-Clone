@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
+import CommentSection from './components/CommentSection/CommentSection';
+import PostContainer from './components/PostContainer/PostContainer';
 import dummyData from './dummy-data';
 
 class App extends Component {
@@ -15,6 +17,7 @@ class App extends Component {
       <div className="App">
        Hi Hi Buddy
        <SearchBar />
+       <CommentSection />
       </div>
     );
   }
