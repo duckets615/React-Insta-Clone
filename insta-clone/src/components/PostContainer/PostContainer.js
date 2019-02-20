@@ -7,17 +7,34 @@ const PostContainer = props => {
     return (
         <div className="post-container">
 
-        {props.postData.map(post => {
+        {props.postData.map((post, id) => {
+            if(props.currentSearch === null ||
+                props.currentSearch.trim() === "" ||
+                    (post.username.includes(props.currentSearch.trim()) &&
+                        props.currentSearch.trim().length >= 3
+                )) {
             return (
-            <div className="post">
-                <PostHeader username={post.username} thumbnail={post.thumbnailUrl}/>
+            <div key={'contain' + id} className="post">
+                <PostHeader
+                username={post.username}
+                thumbnail={post.thumbnailUrl}
+                key={'post' + id}
+                />
+
                 <div className="content-img">
-                    <img src={post.imageUrl} />
+                    <img src={post.imageUrl} alt="post"/>
                 </div>
-                <CommentSection comments={post.comments}/>
+
+                <CommentSection
+                key={'comments' + id}
+                likes={post.likes}
+                comments={post.comments}
+                timestamp={post.timestamp}
+                />
+
             </div>
             )
-        }
+        }}
         )}
       </div>
 
